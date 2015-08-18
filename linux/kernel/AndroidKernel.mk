@@ -104,7 +104,7 @@ $(KERNEL_CONFIG_KDUMP): $(KERNEL_DEFCONFIG_KDUMP) $(wildcard $(KERNEL_DIFFCONFIG
 
 build_bzImage: $(KERNEL_CONFIG) openssl $(MINIGZIP)
 	@$(KERNEL_BLD_ENV) $(MAKE) -C $(KERNEL_SRC_DIR) $(KERNEL_BLD_FLAGS)
-	@cp -f $(KERNEL_OUT_DIR)/arch/x86/boot/bzImage $(PRODUCT_OUT)/kernel
+	@cp -f $(KERNEL_OUT_DIR)/arch/x86/boot/bzImage $(PRODUCT_OUT)/bzImage
 
 build_bzImage_kdump: $(KERNEL_CONFIG_KDUMP) openssl $(MINIGZIP)
 	@echo Building the kdump bzimage
