@@ -1,0 +1,5 @@
+#
+# Normal rules
+#
+bin/
+!/bin/README.md
